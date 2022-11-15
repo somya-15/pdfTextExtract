@@ -55,14 +55,16 @@ def save_file():
         print(pdfReader.numPages)
 
         # creating a page object
-        pageObj = pdfReader.getPage(0)
+        pageObj1 = pdfReader.getPage(0)
+        pageObj2 = pdfReader.getPage(1)
 
         # extracting text from page
-        print(pageObj.extractText())
+        text = pageObj1.extractText() + "\n" + pageObj2.extractText()
+        print(text)
 
         # closing the pdf file object
         pdfFileObj.close()
-        content = pageObj.extractText()
+        content = text
         return render_template('content.html', content=content) 
 
 if __name__ == '__main__':
