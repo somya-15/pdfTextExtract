@@ -7,13 +7,13 @@ Python 2.7.x or Python 3.6.x
 1. Clone the repository
 
 ```
-git clone https://github.com/karthikrk1/flask-app.git
+git clone 
 ```
 
 2. Change to the project directory
 
 ```
-cd flask-app
+cd 
 ```
 
 3. Create a python virtual environment
