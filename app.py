@@ -60,12 +60,20 @@ def save_file():
 
         # extracting text from page
         text = pageObj1.extractText() + "\n" + pageObj2.extractText()
+
         print(text)
 
         # closing the pdf file object
         pdfFileObj.close()
         content = text
-        return render_template('content.html', content=content) 
+        word = text
+        if(word.find('D&D Character Maker | ') != -1):
+            indexS=word.find('D&D Character Maker | ') + 22
+            indexE=word.find('https://fastcharacter.com/results.php') - 11
+            substring = word[indexS:indexE]
+
+
+        return render_template('content.html', content=substring) 
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug = True)
