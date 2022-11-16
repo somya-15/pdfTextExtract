@@ -2,7 +2,7 @@
 Running this application on a local environment
 Prerequisites:
 In order to run the app the following prerequisites are needed to be installed.
-Python 2.7.x or Python 3.6.x
+Python 3.6.x or higher in Miniconda or conda environment
 
 1. Clone the repository
 
